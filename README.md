@@ -21,7 +21,7 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 
 ## 📒 Documentação
 
-Uma cópia da documentação desenvolvida pelo grupo responsável pela confecção do projeto pode ser encontrada [AQUI](resources/Documentação.pdf).
+Uma cópia da documentação desenvolvida pelo grupo responsável pela confecção do projeto pode ser encontrada [AQUI](resources/musicas.pdf).
 
 ## 🎓 Sobre o projeto
 
