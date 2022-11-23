@@ -18,7 +18,7 @@
 			<div x-data="{ open: false }"
 				class="flex flex-col max-w-screen-xl p-5 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
 				<div class="flex flex-row items-center justify-between lg:justify-start">
-					<a href="#"
+					<a href="."
 						class="text-lg font-bold tracking-tighter text-cyan-600 transition duration-500 ease-in-out transform tracking-relaxed lg:pr-8">
 						Playlist
 					</a>
@@ -32,6 +32,12 @@
 							<a href="#" type="button" data-modal-toggle="new-song-modal" id="btnAddSong"
 								class="px-2 lg:px-6 py-6 text-sm border-b-2 border-transparent hover:border-cyan-600 leading-[22px] md:px-3 text-gray-500 hover:text-cyan-500">
 								Add Song
+							</a>
+						</li>
+						<li>
+							<a href="info.html" type="button"
+								class="px-2 lg:px-6 py-6 text-sm border-b-2 border-transparent hover:border-cyan-600 leading-[22px] md:px-3 text-gray-500 hover:text-cyan-500">
+								Information
 							</a>
 						</li>
 					</ul>
@@ -77,7 +83,8 @@
 			</section>
 		</div>
 
-		<div id="new-song-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 p-4 w-full md:inset-0 h-modal md:h-full">
+		<div id="new-song-modal" tabindex="-1" aria-hidden="true"
+			class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 p-4 w-full md:inset-0 h-modal md:h-full">
 			<div class="relative w-full max-w-md h-full md:h-auto">
 				<!-- Modal content -->
 				<div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
@@ -86,26 +93,40 @@
 							<input id="typeOfOperation" type="hidden" value="CREATE">
 							<input id="songId" type="hidden">
 							<div>
-								<label for="songName" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name</label>
-								<input type="text" name="name" id="songName" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
+								<label for="songName"
+									class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name</label>
+								<input type="text" name="name" id="songName"
+									class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+									required>
 							</div>
 							<div>
-								<label for="songArtist" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Artist</label>
-								<input type="text" name="artist" id="songArtist" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
+								<label for="songArtist"
+									class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Artist</label>
+								<input type="text" name="artist" id="songArtist"
+									class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+									required>
 							</div>
 							<div class="flex justify-between">
 								<div class="flex items-start">
 									<div>
-										<label for="songAlbum" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Album</label>
-										<input type="text" name="album" id="songAlbum" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
+										<label for="songAlbum"
+											class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Album</label>
+										<input type="text" name="album" id="songAlbum"
+											class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+											required>
 									</div>
 									<div class="ml-5">
-										<label for="songDuration" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Duration <small class="text-gray-500">in seconds</small></label>
-										<input type="number" name="duration" id="songDuration" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
+										<label for="songDuration"
+											class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Duration
+											<small class="text-gray-500">in seconds</small></label>
+										<input type="number" name="duration" id="songDuration"
+											class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+											required>
 									</div>
 								</div>
 							</div>
-							<button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Save</button>
+							<button type="submit"
+								class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Save</button>
 						</form>
 					</div>
 				</div>
