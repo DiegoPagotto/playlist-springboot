@@ -37,12 +37,14 @@ function remove(event){
         url:'http://localhost:8080/song/'+ id,
         method: 'DELETE',
         success: function(){
-            alert('Deletado!');
             updatePlaylist();
         }
     })
 }
 
+function removeModalBackdrop(){
+    $("body > div").remove();
+}
 
 $(document).ready(updatePlaylist);
 
@@ -62,6 +64,9 @@ $("#modal-form").submit(function(event){
         update(song, $("#songId").val());
     else
         alert('Invalid operation');
+    const modal = new Modal(document.getElementById('new-song-modal'));
+    modal.hide();
+    removeModalBackdrop();
 
 });
 
@@ -73,9 +78,8 @@ function create(song){
         dataType: 'json',
         contentType: "application/json; charset=utf-8",
         success: function(){
-            alert('Adicionado!');
             updatePlaylist();
-            $("#modal-form").reset();
+            $("#modal-form")[0].reset();
         }
      })
 }
@@ -88,9 +92,8 @@ function update(song, id){
         dataType: 'json',
         contentType: "application/json; charset=utf-8",
         success: function(){
-            alert('Atualizado!');
             updatePlaylist();
-            $("#modal-form").reset();
+            $("#modal-form")[0].reset();
             const modal = new Modal(document.getElementById('new-song-modal'));
             modal.hide();
         }
