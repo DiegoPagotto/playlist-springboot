@@ -13,6 +13,10 @@ function updatePlaylist(){
     });
 }
 
+$("#btnAddSong").click(function(){
+    $("#typeOfOperation").val("CREATE");
+});
+
 function edit(event){
     let id = $(event.currentTarget.parentNode).attr('id');
     $.ajax({
